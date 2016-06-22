@@ -1,0 +1,82 @@
+/**
+ * Header Style Sheet
+ * Echolac Site
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors: Tal Reznic
+ */
+
+header {
+  padding: 2em 0em;
+  background-color: @color_text;
+  text-align: center;
+  position: relative;
+  color: @color_bright_text;
+}
+
+header img {
+  display: inline-block;
+  width: 25%;
+}
+
+header h1 {
+  font-weight: 400;
+}
+
+header strong {
+  display: block;
+  font-weight: 400;
+  font-size: 1.6em;
+}
+
+header a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1em 3em;
+  line-height: 100%;
+  font-size: 1.3em;
+  color: @color_highlight;
+  border: 1px solid @color_highlight;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  z-index: 0;
+}
+
+header a:hover {
+  color: @color_bright_text;
+  border-color: @color_bright_text;
+}
+
+header a:hover:before {
+  right: 0%;
+}
+
+header a:hover:after {
+  left: 0%;
+}
+
+header a:before {
+  content: "";
+  position: absolute;
+  right: -100%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: @color_highlight;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+header a:after {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: @color_highlight;
+  transition: all 0.3s;
+  z-index: -1
+}

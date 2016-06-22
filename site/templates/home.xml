@@ -9,7 +9,27 @@
 		</head>
 
 		<body>
-			<h1>It works!</h1>
+			<!-- Top section of the site -->
+			<header>
+				<img src="_BASEURL.'/site/images/logo.svg'"  alt="logo" cms:eval="src"/>
+				<h1><cms:text constant="slogan"/></h1>
+				<a href="#form"><cms:text constant="button_contact"/></a>
+			</header>
+
+			<!-- Product gallery -->
+			<section class="products">
+				
+			</section>
+
+			<!-- Features section -->
+			<section class="features">
+				
+			</section>
+
+			<!-- Video section -->
+			<section class="video">
+				
+			</section>
 		</body>
 	</html>
 </document>

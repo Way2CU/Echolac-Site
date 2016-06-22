@@ -4,4 +4,7 @@
 	<section name="home">
 		<language name="all" file="home.xml" />
 	</section>
+  <section name="videos">
+    <language name="all" file="video_view.xml"/>
+  </section>
 </document>

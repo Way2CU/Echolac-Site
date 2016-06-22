@@ -1,0 +1,173 @@
+/**
+ * Content Style Sheet
+ * Echolac Site
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors: Tal Reznic
+ */
+
+@feature_height: 150px;
+
+
+section {
+  padding: 40px calc(~'(100% - 1200px)' / 2);
+}
+
+/**
+ * Features
+ */
+section.features {
+  background-image: url(../images/products-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  min-height: 890px;
+}
+
+section.features h4 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  text-align: center;
+  width: 50%;
+  font-weight: 400;
+  font-size: 2em;
+}
+
+section.features ul {
+  position: relative;
+  min-height: 700px;
+  margin: 0;
+  margin-top: 95px;
+  padding: 0;
+  list-style-type: none;
+}
+
+section.features ul li {
+  position: absolute;
+  width: 33%;
+  height: @feature_height;
+  padding-left: @feature_height;
+  box-sizing: border-box;
+  background-color: fade(@color_bright_text, 80%);
+  box-shadow: 0px 3px 5px @color_border;
+  border-radius: 0px 0px 40px 0px;
+  border: 1px solid @color_bright_text;
+}
+
+section.features ul li:before {
+  position: absolute;
+  top: 0px;
+  right: 90%;
+  content: "";
+  background-image: url(../images/features-handle.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 255px 115px;
+  width: 255px;
+  height: 115px;
+}
+
+section.features ul li:nth-of-type(1):before {
+  right: 80%;
+  top: 1em;
+}
+
+section.features ul li:nth-of-type(2):before {
+  right: 53%;
+  top: -53px;
+}
+
+section.features ul li:nth-of-type(3):before {
+  right: 60%;
+  top: -100px;
+}
+
+section.features ul li:nth-child(1n+4) {
+  left: 0;
+  padding-left: 0;
+  padding-right: @feature_height;
+  border-radius: 0px 0px 0px 40px;
+}
+
+section.features ul li:nth-child(1n+4):before {
+  right: auto;
+  left: 100%;
+  transform: rotate(180deg);
+}
+
+section.features ul li:nth-child(3n+2) {
+  top: 50%;
+  margin-top: -(@feature_height / 2);
+}
+
+section.features ul li:nth-child(3n+3) {
+  bottom: 0;
+}
+
+section.features ul li:nth-of-type(4):before {
+  left: 90%;
+  top: 140px;
+}
+
+section.features ul li:nth-of-type(5):before {
+  left: 90%;
+  top: 100px;
+}
+
+section.features ul li:nth-of-type(6):before {
+  left: 62%;
+  top: 10px;
+  transform: rotateY(180deg);
+}
+
+section.features ul li a {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section.features ul li a:hover svg {
+  opacity: 1;
+}
+
+section.features ul li a svg {
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;
+  left: 50%;
+  margin-left: -1.5em;
+  width: 3em;
+  height: 3em;
+  fill: @color_bright_text;
+  border-radius: 50%;
+  background-color: fade(@color_heading, 70%);
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+section.features ul li a svg path {
+  transform-origin: center center;
+  transform: translateX(0.2em) scale(0.6);
+}
+
+section.features ul li:nth-child(1n+4) a {
+  display: inline-block;
+  width: @feature_height;
+  height: @feature_height;
+  left: auto;
+  right: 0;
+}
+
+section.features ul li img {
+  display: inline-block;
+  vertical-align: top;
+  width: @feature_height;
+}
+
+section.features ul li p {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 1em;
+  box-sizing: border-box;
+}

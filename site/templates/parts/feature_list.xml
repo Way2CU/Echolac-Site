@@ -1,0 +1,19 @@
+<document>
+  <li>
+    <a
+      href="url_Make('view', 'videos', array('id', $params['text_id']))"
+      title="$params['title'][$language]"
+      cms:eval="href,title"
+      >
+      <cms:module
+        name="gallery"
+        action="show_image"
+        group_id="$params['gallery']"
+        template="parts/feature_image.xml"
+        cms:eval="group_id"
+        />
+        <cms:svg file="site-sprite.svg" symbol="triangle"/>
+    </a>
+    <cms:markdown param="content" multilanguage="yes"/>
+  </li>
+</document>

@@ -1,0 +1,14 @@
+<document>
+  <cms:module
+    name="youtube"
+    action="show"
+    text_id="$_REQUEST['id']"
+    embed="1"
+    width="800"
+    height="483"
+    enable_api="1"
+    allowfullscreen="true"
+    frameborder="0"
+    cms:eval="text_id"
+    />
+</document>

@@ -18,12 +18,20 @@
 
 			<!-- Product gallery -->
 			<section class="products">
-				
+			
 			</section>
 
 			<!-- Features section -->
 			<section class="features">
-				
+				<h4><cms:text constant="title_features"/></h4>
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="features"
+						template="parts/feature_list.xml"
+						/>
+				</ul>
 			</section>
 
 			<!-- Video section -->

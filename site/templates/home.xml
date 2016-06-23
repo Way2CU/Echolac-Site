@@ -13,7 +13,9 @@
 			<cms:svg file="site-sprite.svg"/>
 			<!-- Top section of the site -->
 			<header>
-				<iframe src="https://player.vimeo.com/video/171741259?autoplay=1title=0&amp;byline=0&amp;loop=1"></iframe>
+				<cms:desktop>
+					<iframe src="https://player.vimeo.com/video/171741259?autoplay=1title=0&amp;byline=0&amp;loop=1"></iframe>
+				</cms:desktop>
 				<img src="_BASEURL.'/site/images/logo.svg'"  alt="logo" cms:eval="src"/>
 				<h1><cms:text constant="slogan"/></h1>
 				<a href="#form"><cms:text constant="button_contact"/></a>

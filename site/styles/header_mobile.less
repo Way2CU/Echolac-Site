@@ -1,0 +1,54 @@
+/**
+ * Main header Style Sheet
+ * Echolac Site
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors: Tal Reznic
+ */
+
+header {
+  background-color: black;
+  text-align: center;
+  background-image: url(../images/mobile-header.jpg);
+  background-repeat: no-repeat;
+  background-position: center 70px;
+  background-size: 100% auto;
+  color: @color_bright_text;
+  height: 455px;
+  position: relative;
+}
+
+header img {
+  display: block;
+  padding-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+header h1 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+header strong {
+  display: block;
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+header a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1em 3em;
+  line-height: 100%;
+  font-size: 1em;
+  color: @color_highlight;
+  border: 1px solid @color_highlight;
+  background-color: fade(@color_bright_text, 60%);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  z-index: 0;
+}

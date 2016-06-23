@@ -23,6 +23,13 @@
 
 			<!-- Product gallery -->
 			<section class="products">
+				<cms:mobile>
+					<div class="intro">
+						<a class="show" href="javascript:void(0)">
+							<cms:text constant="label_show_products"/>
+						</a>
+					</div>
+				</cms:mobile>
 				<cms:module
 					name="gallery"
 					action="show_group_list"

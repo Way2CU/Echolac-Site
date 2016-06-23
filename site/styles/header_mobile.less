@@ -37,18 +37,23 @@ header strong {
   font-size: 1.1em;
 }
 
+div.intro a,
 header a {
   display: inline-block;
   text-decoration: none;
   padding: 1em 3em;
   line-height: 100%;
   font-size: 1em;
-  color: @color_highlight;
-  border: 1px solid @color_highlight;
-  background-color: fade(@color_bright_text, 60%);
+  color: @color_bright_text;
+  border: 1px solid @color_bright_text;
+  background-color: @color_highlight;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s;
   z-index: 0;
+}
+
+div.intro a {
+  margin-top: 300px;
 }

@@ -1,0 +1,110 @@
+/**
+ * Content mobile Style Sheet
+ * Echolac Site
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors: Tal Reznic
+ */
+
+div.intro {
+  text-align: center;
+  background-image: url(../images/mobile-luggages.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  min-height: 400px;
+}
+
+/**
+ * Suitcases galleries
+ */
+div.gallery {
+  display: block;
+  text-align: center;
+  padding: 1em;
+  overflow: hidden;
+}
+
+div.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: 1px solid @color_border;
+  width: 240px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+div.image img {
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  margin-left: -120px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+div.image img.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+div.image h3 {
+  margin: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  font-weight: 400;
+  background-color: @color_heading;
+  color: @color_bright_text;
+}
+
+div.control {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+  width: 300px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+div.control a {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  background-color: lighten(@color_border, 20%);
+}
+
+div.control a.previous {
+  right: auto;
+  left: 0;
+}
+
+div.control a:before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  left: 50%;
+  margin-left: -7.5px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 15px solid @color_border;
+  border-bottom: 10px solid transparent;
+}
+
+div.control a.previous:before {
+  transform: rotate(180deg);
+}

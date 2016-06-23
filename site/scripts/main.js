@@ -73,11 +73,25 @@ Site.handle_thumbnail_click = function(event) {
 }
 
 /**
+ * Handle clicking on button show products
+ * @params object event
+ */
+Site.handle_show_products = function() {
+	var galleries = document.querySelectorAll('div.gallery');
+	for(var i=0; i < galleries.length; i++)
+		galleries[i].classList.toggle('show');
+}
+
+/**
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
 	if (Site.is_mobile()) {
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+		// create function for handling show products section
+		var button_show = document.querySelector('a.show');
+		button_show.addEventListener('click', Site.handle_show_products);
 
 	} else {
 		// create video dialog

@@ -41,6 +41,13 @@
 			<!-- Features section -->
 			<section class="features">
 				<h4><cms:text constant="title_features"/></h4>
+				<cms:mobile>
+					<img 
+						src="_BASEURL.'/site/images/features.jpg'"
+						alt="features-image"
+						cms:eval="src"
+						/>
+				</cms:mobile>
 				<ul>
 					<cms:module
 						name="articles"

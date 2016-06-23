@@ -14,6 +14,121 @@ section {
 }
 
 /**
+ * Suitcases galleries
+ */
+
+div.gallery {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1em;
+  box-sizing: border-box;
+  width: 33.3%;
+  overflow: hidden;
+}
+
+div.gallery:hover div.control {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+div.image {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  border: 1px solid @color_border;
+  width: 240px;
+  height: 400px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+div.image img {
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  margin-left: -120px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+div.image img.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+div.image h3 {
+  margin: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  font-weight: 400;
+  background-color: @color_heading;
+  color: @color_bright_text;
+}
+
+div.control {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  height: 350px;
+  width: 100px;
+  text-align: center;
+  border: 1px solid @color_border;
+  margin-right: 20px;
+  overflow: hidden;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+div.control a {
+  display: block;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  background-color: @color_border;
+  transition: all 0.3s;
+}
+
+div.control a.next {
+  bottom: 0;
+}
+
+div.control a.previous {
+  top: 0;
+}
+
+div.control a:hover {
+  background-color: darken(@color_border, 10%);
+}
+
+div.control a:before {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid @color_bright_text;
+}
+
+div.control a.previous:before {
+  transform: rotate(180deg);
+}
+
+div.control img {
+  display: block;
+  top: 0;
+}
+
+/**
  * Features
  */
 section.features {
@@ -170,4 +285,160 @@ section.features ul li p {
   margin: 0;
   padding: 1em;
   box-sizing: border-box;
+}
+
+/**
+ * Videos section
+ */
+section.video div.video_wrap {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.3%;
+  box-sizing: border-box;
+}
+
+section.video div.video_wrap h4 {
+  margin-top: 0;
+  text-align: center;
+}
+
+section.contact > h2,
+section.location > h2 {
+  font-size: 3em;
+  font-weight: 400;
+  text-align: center;
+}
+
+section.contact > h2,
+section.location > h2 {
+  margin-bottom: 0;
+}
+
+section.contact > p,
+section.location > p {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+section.contact > svg,
+section.location svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 7em;
+  height: 7em;
+}
+
+section.location div,
+section.location article {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1em;
+  width: 50%;
+  border: 1px solid lighten(@color_border, 15%);
+  box-sizing: border-box;
+  position: relative;
+}
+
+section.location article p {
+  font-size: 1.2em;
+}
+
+section.location div {
+  border: none;
+}
+
+section.location div img {
+  display: block;
+  padding-top: 5em;
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.location div svg {
+  position: absolute;
+  top: 50%;
+  margin-top: -175px;
+  left: 50%;
+  margin-left: -175px;
+  width: 350px;
+  height: 350px;
+}
+
+/**
+ * Section contact
+ */
+section.contact {
+  text-align: center;
+}
+
+section.contact a {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1em;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: @color_text;
+}
+
+section.contact a svg {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  width: 2em;
+  height: 2em;
+}
+
+section.contact form {
+  display: block;
+}
+
+section.contact form label {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1em;
+}
+
+section.contact form label span {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.5em;
+  color: darken(@color_border, 30%);
+}
+
+section.contact form label input {
+  padding: 0.7em 0.2em;
+  border: 1px solid darken(@color_border, 10%);
+  width: 250px;
+  transition: all 0.3s;
+}
+
+section.contact form label input:hover {
+  border: 1px solid lighten(@color_highlight, 20%);
+}
+
+section.contact form label input:focus {
+  border: 1px solid @color_highlight;
+}
+
+section.contact form div.controls {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1em;
+}
+
+section.contact form div.controls button {
+  padding: 0.7em 1.5em;
+  border: 1px solid darken(@color_border, 10%);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s;
+  color: @color_bright_text;
+  background-color: @color_highlight;
+}
+
+section.contact form div.controls button:hover {
+  background-color: lighten(@color_highlight, 10%);
 }

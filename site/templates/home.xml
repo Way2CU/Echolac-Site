@@ -5,13 +5,15 @@
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title><cms:text constant="site_title"/></title>
+			<cms:collection include="page_control,animation_chain"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
 		<body>
+			<cms:svg file="site-sprite.svg"/>
 			<!-- Top section of the site -->
 			<header>
-				<iframe src="https://player.vimeo.com/video/171741259?autoplay=1title=0&amp;byline=0&amp;portrait=0&amp;loop=1"></iframe>
+				<iframe src="https://player.vimeo.com/video/171741259?autoplay=1title=0&amp;byline=0&amp;loop=1"></iframe>
 				<img src="_BASEURL.'/site/images/logo.svg'"  alt="logo" cms:eval="src"/>
 				<h1><cms:text constant="slogan"/></h1>
 				<a href="#form"><cms:text constant="button_contact"/></a>
@@ -19,7 +21,12 @@
 
 			<!-- Product gallery -->
 			<section class="products">
-			
+				<cms:module
+					name="gallery"
+					action="show_group_list"
+					container="suitcases"
+					template="parts/suitcase_groups.xml"
+					/>
 			</section>
 
 			<!-- Features section -->
@@ -37,8 +44,83 @@
 
 			<!-- Video section -->
 			<section class="video">
-				
+				<cms:module
+					name="youtube"
+					action="show_list"
+					group_text_id="videos"
+					template="parts/video_list.xml"
+				/>
 			</section>
+
+			<!-- Location section -->
+			<section class="location">
+				<cms:svg file="site-sprite.svg" symbol="locations"/>
+				<h2><cms:text constant="title_location"/></h2>
+				<p><cms:text constant="description_location"/></p>
+				<!-- location article -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="location"
+					template="stock/article_generic.xml"
+					/>
+				<div>
+					<img src="_BASEURL.'/site/images/pillow.jpg'"  alt="pillow" cms:eval="src"/>
+					<cms:svg file="site-sprite.svg" symbol="sale"/>
+				</div>
+			</section>
+
+			<!-- contact section -->
+			<section id="form" class="contact">
+				<cms:svg file="site-sprite.svg" symbol="contact"/>
+				<h2><cms:text constant="title_contact"/></h2>
+				<!-- contact information -->
+				<a
+					href="'tel:'.urlencode(Language::getText('phone'))"
+					cms:eval="href"
+					class="phone"
+					>
+					<cms:svg file="site-sprite.svg" symbol="phone"/>
+					<cms:text constant="phone_label"/>
+				</a>
+				<a
+					href="'mailto:'.urlencode(Language::getText('mail'))"
+					cms:eval="href"
+					class="mail"
+					>
+					<cms:svg file="site-sprite.svg" symbol="email"/>
+					<cms:text constant="mail_label"/>
+				</a>
+
+				<a
+					href="'mailto:'.urlencode(Language::getText('mail'))"
+					cms:eval="href"
+					class="address"
+					>
+					<cms:svg file="site-sprite.svg" symbol="location"/>
+					<cms:text constant="address_label"/>
+				</a>
+				<!-- contact form -->
+				<cms:module
+					name="contact_form"
+					action="show"
+					text_id="contact"
+					/>
+			</section>
+
+			<!-- Bottom section of the site -->
+			<footer>
+				<div class="top">
+					<h2><cms:text constant="slogan"/></h2>
+					<img src="_BASEURL.'/site/images/logo-black.svg'"  alt="logo" cms:eval="src"/>
+				</div>
+				<!-- copyright -->
+				<cms:template file="stock/copyright.xml">
+					<param name="holder" value="copyright_holder"/>
+					<param name="text" value="copyright_text"/>
+					<param name="light" value=""/>
+				</cms:template>
+			</footer>
 		</body>
 	</html>
 </document>

@@ -1,9 +1,17 @@
 {
     "site_title": "Echolac",
     "send": "שליחת טופס",
+    "phone": "‫‪03-6811741",
+    "phone_label": "‫‪טלפון: 03-6811741",
+    "mail": "‫‪danlarltd@gmail.com‬‬",
+    "mail_label": "‫‪danlarltd@gmail.com :דוא''ל ",
+    "address_label": "‫כתובת: הכישור 2 תל-אביב(מול בלומפילד)",
     "button_contact": "יצירת קשר",
     "slogan": "<strong>המזוודה היפנית החזקה בעולם.</strong>לנסיעה בטוחה ומושלמת",
     "title_features": "הכל מתחיל בפרטים הקטנים קשוחה מבחוץ, רכה ומתוקתקת מבפנים",
     "title_contact": "צרו קשר",
-    "title_where_to_find": "היכן ניתן להשיג?"
+    "title_location": "היכן ניתן להשיג?",
+    "description_location": "מוצרי Echolac מופצים במגוון חנויות ברחבי הארץ",
+    "copyright_holder": "Copyright &copy; 2015. by <a href=\"http://way2cu.com\" target=\"_blank\">Way2CU</a>.",
+    "copyright_text": "All rights reserved."
 }

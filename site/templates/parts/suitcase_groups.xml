@@ -1,0 +1,29 @@
+<document>
+  <div class="gallery">
+    <!-- Big image -->
+    <div class="image">
+      <h3><cms:var param="name" multilanguage="yes"/></h3>
+      <cms:module
+        name="gallery"
+        action="show_image_list"
+        group_id="$params['id']"
+        template="parts/feature_image.xml"
+        cms:eval="group_id"
+        >
+        <param name="big_image" value=""/>
+      </cms:module>
+    </div>
+    <!-- controls -->
+    <div class="control">
+      <a href="javascript:void(0)" class="next"></a>
+      <cms:module
+        name="gallery"
+        action="show_image_list"
+        group_id="$params['id']"
+        template="parts/control_images.xml"
+        cms:eval="group_id"
+        />
+      <a href="javascript:void(0)" class="previous"></a>
+    </div>
+  </div>
+</document>

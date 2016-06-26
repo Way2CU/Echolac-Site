@@ -81,6 +81,22 @@ div.control {
   visibility: hidden;
 }
 
+div.control img.transit {
+  transition: none;
+}
+
+div.control img {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  opacity: 0;
+}
+
+div.control img.visible {
+  transition: all 0.3s;
+  opacity: 1;
+}
+
 div.control a {
   display: block;
   padding-top: 0.5em;
@@ -95,10 +111,12 @@ div.control a {
 
 div.control a.next {
   bottom: 0;
+  z-index: 10;
 }
 
 div.control a.previous {
   top: 0;
+  z-index: 10;
 }
 
 div.control a:hover {

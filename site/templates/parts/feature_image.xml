@@ -1,6 +1,7 @@
 <document>
   <cms:if condition="isset($template['big_image'])">
-    <img 
+    <img
+      class="big_image" 
       src="gallery::getThumbnailById($params['id'], null, 350,Thumbnail::CONSTRAIN_BOTH)"
       alt="$params['title'][$language]"
       cms:eval="src,alt"

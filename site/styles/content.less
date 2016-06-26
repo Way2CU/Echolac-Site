@@ -239,6 +239,25 @@ section.features ul li a {
   left: 0;
 }
 
+section.features ul li a:hover:before {
+  opacity: 1;
+}
+
+section.features ul li a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;
+  left: 50%;
+  margin-left: -1.5em;
+  background-color: fade(@color_heading, 60%);
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
 section.features ul li a:hover svg {
   opacity: 1;
 }
@@ -246,21 +265,14 @@ section.features ul li a:hover svg {
 section.features ul li a svg {
   position: absolute;
   top: 50%;
-  margin-top: -1.5em;
+  margin-top: -1em;
   left: 50%;
-  margin-left: -1.5em;
-  width: 3em;
-  height: 3em;
+  margin-left: -1em;
+  width: 2em;
+  height: 2em;
   fill: @color_bright_text;
-  border-radius: 50%;
-  background-color: fade(@color_heading, 70%);
   transition: all 0.3s;
   opacity: 0;
-}
-
-section.features ul li a svg path {
-  transform-origin: center center;
-  transform: translateX(0.2em) scale(0.6);
 }
 
 section.features ul li:nth-child(1n+4) a {

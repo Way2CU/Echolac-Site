@@ -11,7 +11,7 @@ header {
   text-align: center;
   background-image: url(../images/mobile-header.jpg);
   background-repeat: no-repeat;
-  background-position: center 70px;
+  background-position: center 65px;
   background-size: 100% auto;
   color: @color_bright_text;
   height: 455px;
@@ -37,6 +37,8 @@ header strong {
   font-size: 1.1em;
 }
 
+a.next_video,
+a.previous_video,
 div.intro a,
 header a {
   display: inline-block;
@@ -52,6 +54,11 @@ header a {
   overflow: hidden;
   transition: all 0.3s;
   z-index: 0;
+}
+
+a.next_video,
+a.previous_video {
+  padding: 1em 1em;
 }
 
 div.intro a {

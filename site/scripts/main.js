@@ -95,9 +95,17 @@ Site.on_load = function() {
 	if (Site.is_mobile()) {
 		Site.mobile_menu = new Caracal.MobileMenu();
 		Site.video_dialog.setSize(300, 182);
+
 		// create function for handling show products section
 		var button_show = document.querySelector('a.show');
 		button_show.addEventListener('click', Site.handle_show_products);
+
+		// create pagecontrol for rotating youtube videos
+		Site.video_gallery = new PageControl('section.video', 'a.youtube');
+		Site.video_gallery
+			.setWrapAround(true)
+			.attachPreviousControl($('a.previous_video'))
+			.attachNextControl($('a.next_video'));
 	}
 
 		// assign handler for feature videos

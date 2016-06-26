@@ -67,6 +67,15 @@
 					group_text_id="videos"
 					template="parts/video_list.xml"
 				/>
+				<!-- controls for youtube list on mobile version -->
+				<cms:mobile>
+					<a href="javascript:void(0)" class="previous_video">
+						<cms:text constant="previous_video"/>
+					</a>
+					<a href="javascript:void(0)" class="next_video">
+						<cms:text constant="next_video"/>
+					</a>
+				</cms:mobile>
 			</section>
 
 			<!-- Location section -->

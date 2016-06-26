@@ -17,15 +17,16 @@
 
   <cms:mobile>
     <a
+      class="youtube"
       href="'http://www.youtube.com/watch?v='.$params['video_id']"
       title="$params['title'][$language]"
       cms:eval="href,title"
       >
-      <img
-        src="$params['thumbnail']"
-        alt="$params['title'][$language]"
-        cms:eval="src,alt"
-      />
+      <cms:thumbnail
+        id="$params['id']"
+        image_number="0"
+        cms:eval="id"
+        />
     </a>
   </cms:mobile>
 </document>

@@ -1,3 +1,4 @@
+
 /**
  * Content mobile Style Sheet
  * Echolac Site
@@ -222,14 +223,43 @@ section.features ul li p {
  */
 
 section.video {
-  padding-top: 1em;
+  padding-top: 250px;
+  padding-bottom: 2em;
   text-align: center;
+  position: relative;
 }
 
 section.video a {
+  position: absolute;
+  top: 1em;
+  left: -150%;
+  width: 300px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+section.video a.visible {
+  position: absolute;
+  top: 1em;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  overflow: hidden;
+}
+
+section.video a.next_video,
+section.video a.previous_video {
   display: inline-block;
-  vertical-align: top;
-  width: 50%;
+  position: relative;
+  width: auto;
+  left: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+section.video a img {
+  width: 100%;
+  height: auto;
 }
 
 section.location {

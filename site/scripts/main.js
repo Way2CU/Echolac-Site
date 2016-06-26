@@ -121,7 +121,7 @@ Site.on_load = function() {
 
 		for(var i=0, count=galleries.length; i < count; i++) {
 			var gallery = galleries[i];
-			var slider = new Caracal.Gallery.Slider(2);
+			var slider = new Caracal.Gallery.Slider(2, !Site.is_mobile());
 			var control = gallery.querySelector('div.control');
 			var image_container = gallery.querySelector('div.image');
 			var images = control.querySelectorAll('img');
@@ -135,7 +135,7 @@ Site.on_load = function() {
 			slider
 				.images.set_container($(gallery))
 				.images.add($(images))
-				.images.set_step_size(2)
+				.images.set_step_size(1)
 				.images.set_center(true)
 				.images.set_spacing(15)
 				.controls.attach_next($(next))

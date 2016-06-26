@@ -13,7 +13,7 @@ div.intro {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% auto;
-  min-height: 400px;
+  min-height: 375px;
 }
 
 /**
@@ -111,6 +111,7 @@ div.control a {
 div.control a.previous {
   right: auto;
   left: 0;
+  z-index: 10;
 }
 
 div.control a:before {
@@ -130,6 +131,7 @@ div.control a:before {
 
 div.control a.next:before {
   transform: rotate(180deg);
+  z-index: 10;
 }
 
 /**
@@ -137,7 +139,7 @@ div.control a.next:before {
  */
 section.features h4 {
   margin: 0;
-  padding: 1em;
+  padding: 0em 1em;
   text-align: center;
   font-weight: 400;
   font-size: 1.5em;
@@ -167,7 +169,6 @@ section.features ul li {
   box-sizing: border-box;
   background-color: fade(@color_bright_text, 80%);
   box-shadow: 0px 3px 5px @color_border;
-  border: 1px solid @color_heading;
   min-height: 370px;
   overflow: hidden;
 }
@@ -227,6 +228,7 @@ section.video {
   padding-bottom: 2em;
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
 
 section.video a {

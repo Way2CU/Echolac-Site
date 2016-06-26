@@ -86,17 +86,19 @@ Site.handle_show_products = function() {
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
+	// create video dialog
+	Site.video_dialog = new Dialog();
+	Site.video_dialog
+		.setSize(800, 483)
+		.setClearOnClose(true);
+
 	if (Site.is_mobile()) {
 		Site.mobile_menu = new Caracal.MobileMenu();
-
+		Site.video_dialog.setSize(300, 182);
 		// create function for handling show products section
 		var button_show = document.querySelector('a.show');
 		button_show.addEventListener('click', Site.handle_show_products);
-
-	} else {
-		// create video dialog
-		Site.video_dialog = new Dialog();
-		Site.video_dialog.setSize(800, 483);
+	}
 
 		// assign handler for feature videos
 		var video_links = document.querySelectorAll('section.features a');
@@ -125,9 +127,12 @@ Site.on_load = function() {
 			slider
 				.images.set_container($(gallery))
 				.images.add($(images))
+				.images.set_step_size(2)
+				.images.set_center(true)
+				.images.set_spacing(15)
 				.controls.attach_next($(next))
 				.controls.attach_previous($(previous));
-
+			slider.images.update();
 			// attach click handler to thumbnails
 			for (var j=0, image_count=images.length; j<image_count; j++) {
 				var image = images[j];
@@ -139,7 +144,6 @@ Site.on_load = function() {
 
 			Site.sliders.push(slider);
 		}
-	}
 };
 
 

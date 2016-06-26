@@ -64,7 +64,7 @@ Site.handle_thumbnail_click = function(event) {
 	var image = event.target;
 	var index = image.dataset.index;
 	var gallery = document.querySelectorAll('div.gallery')[image.dataset.gallery];
-	var big_image_list = gallery.querySelectorAll('img');
+	var big_image_list = gallery.querySelectorAll('img.big_image');
 	
 	for (var i=0, count=big_image_list.length; i<count; i++)
 		if (index == i)

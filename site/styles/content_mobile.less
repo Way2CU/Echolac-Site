@@ -67,14 +67,32 @@ div.image h3 {
 
 div.control {
   display: block;
+  margin-top: 1em;
   margin-left: auto;
   margin-right: auto;
   height: 150px;
-  width: 300px;
   position: relative;
   text-align: center;
   overflow: hidden;
   position: relative;
+}
+
+div.control img {
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  margin-top: -50px;
+  width: 68px;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+div.control img.transit {
+  transition: none;
+}
+
+div.control img.visible {
+  transition: all 0.3s;
 }
 
 div.control a {
@@ -109,7 +127,7 @@ div.control a:before {
   border-bottom: 10px solid transparent;
 }
 
-div.control a.previous:before {
+div.control a.next:before {
   transform: rotate(180deg);
 }
 
@@ -151,7 +169,6 @@ section.features ul li {
   border: 1px solid @color_heading;
   min-height: 370px;
   overflow: hidden;
-
 }
 
 section.features ul li a {
@@ -198,6 +215,21 @@ section.features ul li p {
   margin: 0;
   padding: 0.5em;
   box-sizing: border-box;
+}
+
+/**
+ * Videos section
+ */
+
+section.video {
+  padding-top: 1em;
+  text-align: center;
+}
+
+section.video a {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
 }
 
 section.location {

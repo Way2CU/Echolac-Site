@@ -267,12 +267,16 @@ section.features ul li a svg {
   top: 50%;
   margin-top: -1em;
   left: 50%;
-  margin-left: -1em;
+  margin-left: -0.8em;
   width: 2em;
   height: 2em;
   fill: @color_bright_text;
   transition: all 0.3s;
   opacity: 0;
+}
+
+section.features ul li a svg:hover {
+  fill: @color_highlight;
 }
 
 section.features ul li:nth-child(1n+4) a {

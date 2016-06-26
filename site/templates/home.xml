@@ -10,11 +10,12 @@
 		</head>
 
 		<body>
+			<cms:raw file="gtm.txt"/>
 			<cms:svg file="site-sprite.svg"/>
 			<!-- Top section of the site -->
 			<header>
 				<cms:desktop>
-					<iframe src="https://player.vimeo.com/video/171741259?autoplay=1title=0&amp;byline=0&amp;loop=1"></iframe>
+					<iframe src="https://player.vimeo.com/video/172274153?autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0"></iframe>
 				</cms:desktop>
 				<img src="_BASEURL.'/site/images/logo.svg'"  alt="logo" cms:eval="src"/>
 				<h1><cms:text constant="slogan"/></h1>
@@ -109,7 +110,7 @@
 				</a>
 
 				<a
-					href="'mailto:'.urlencode(Language::getText('mail'))"
+					href="https://www.google.co.il/maps/place/%D7%94%D7%9B%D7%99%D7%A9%D7%95%D7%A8+2,+%D7%AA%D7%9C+%D7%90%D7%91%D7%99%D7%91+%D7%99%D7%A4%D7%95%E2%80%AD/@32.051183,34.767537,17z/data=!3m1!4b1!4m5!3m4!1s0x151d4ca37fee76fb:0x76c2bcde6dafb23f!8m2!3d32.0511785!4d34.7653483"
 					cms:eval="href"
 					class="address"
 					>

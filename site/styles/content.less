@@ -10,7 +10,11 @@
 
 
 section {
-  padding: 40px calc(~'(100% - 1200px)' / 2);
+  padding: 10px calc(~'(100% - 1200px)' / 2);
+}
+
+section.products {
+  margin-top: -180px;
 }
 
 /**
@@ -274,12 +278,8 @@ section.features ul li a:before {
   border-radius: 50%;
   width: 3em;
   height: 3em;
-  opacity: 0;
-  transition: all 0.3s;
-}
-
-section.features ul li a:hover svg {
   opacity: 1;
+  transition: all 0.3s;
 }
 
 section.features ul li a svg {
@@ -292,7 +292,7 @@ section.features ul li a svg {
   height: 2em;
   fill: @color_bright_text;
   transition: all 0.3s;
-  opacity: 0;
+  opacity: 1;
 }
 
 section.features ul li a svg:hover {

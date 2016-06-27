@@ -140,11 +140,16 @@
 					<img src="_BASEURL.'/site/images/logo-black.svg'"  alt="logo" cms:eval="src"/>
 				</div>
 				<!-- copyright -->
-				<cms:template file="stock/copyright.xml">
-					<param name="holder" value="copyright_holder"/>
-					<param name="text" value="copyright_text"/>
-					<param name="light" value=""/>
-				</cms:template>
+				<div class="bottom">
+					<a  class="interactive" href="http://www.topin.biz/">
+						<img src="_BASEURL.'/site/images/topin3.png'"  alt="top-interactive" cms:eval="src"/>
+					</a>
+					<cms:template file="stock/copyright.xml">
+						<param name="holder" value="copyright_holder"/>
+						<param name="text" value="copyright_text"/>
+						<param name="light" value=""/>
+					</cms:template>
+				</div>
 			</footer>
 		</body>
 	</html>

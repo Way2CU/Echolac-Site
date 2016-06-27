@@ -1,12 +1,12 @@
 ---
 site:
-  domain: sample.com
+  domain: echolac.co.il
   # subdomain: test
   # alias: domain.com
   root: httpdocs
-  username: sample
+  username: echolac
   caracal_branch: develop
-  # ip_address: 0.0.0.0
+  ip_address: 74.208.172.190
   # owner: Some Person
   # plan: Unlimited
   # database_type: 'mysql'

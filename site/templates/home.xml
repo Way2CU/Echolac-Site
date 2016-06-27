@@ -80,7 +80,7 @@
 
 			<!-- Location section -->
 			<section class="location">
-				<cms:svg file="site-sprite.svg" symbol="locations"/>
+				<!-- <cms:svg file="site-sprite.svg" symbol="locations"/> -->
 				<h2><cms:text constant="title_location"/></h2>
 				<p><cms:text constant="description_location"/></p>
 				<!-- location article -->
@@ -98,7 +98,7 @@
 
 			<!-- contact section -->
 			<section id="form" class="contact">
-				<cms:svg file="site-sprite.svg" symbol="contact"/>
+				<!-- <cms:svg file="site-sprite.svg" symbol="contact"/> -->
 				<h2><cms:text constant="title_contact"/></h2>
 				<!-- contact information -->
 				<a

@@ -8,6 +8,7 @@
       width="800"
       height="483"
       enable_api="1"
+      autoplay="1"
       allowfullscreen="true"
       frameborder="0"
       cms:eval="text_id"

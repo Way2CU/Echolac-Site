@@ -476,3 +476,59 @@ section.contact form div.controls button {
 section.contact form div.controls button:hover {
   background-color: lighten(@color_highlight, 10%);
 }
+
+/**
+ * Tablet version
+ */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+section {
+  padding: 40px calc(~'(100vw - 900px)' / 2);
+}
+
+section.video {
+  text-align: center;
+}
+
+section.video div.video_wrap {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1em;
+  width: auto;
+}
+
+div.gallery {
+  width: 50%;
+}
+
+div.control {
+  opacity: 1;
+  visibility: visible;
+}
+
+section.features ul {
+  margin-top: 30px;
+}
+
+section.features ul li {
+  width: 40%;
+}
+
+section.features ul li p {
+  font-size: 0.9em;
+}
+
+section.features ul li:before {
+  display: none;
+}
+
+section.contact form label input {
+  width: 150px;
+}
+
+section.contact a {
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+}

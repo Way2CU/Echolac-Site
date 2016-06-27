@@ -152,6 +152,13 @@ Site.on_load = function() {
 
 			Site.sliders.push(slider);
 		}
+		// handle analytics event
+		$('form').on('analytics-event', function(event, data) {
+			if (!data.error)
+				dataLayer.push({
+	            	'event':'leadSent'
+	            });
+		});
 };
 
 

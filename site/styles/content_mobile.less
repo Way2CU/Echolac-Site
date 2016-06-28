@@ -174,44 +174,34 @@ section.features ul li {
   width: 150px;
   box-sizing: border-box;
   background-color: fade(@color_bright_text, 80%);
-  box-shadow: 0px 3px 5px @color_border;
-  min-height: 370px;
+  border: 1px solid @color_heading;
   overflow: hidden;
 }
 
-section.features ul li a {
-  display: block;
-  position: relative;
+section.features ul li span {
+  display: inline-block;
+  margin: 0.5em 0em;
+  border: 1px solid @color_border;
+  border-radius: 50%;
 }
 
-section.features ul li a:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  margin-top: -1.5em;
-  left: 50%;
-  margin-left: -1.5em;
-  background-color: fade(@color_heading, 60%);
-  border-radius: 50%;
-  width: 3em;
-  height: 3em;
+section.features ul li span svg {
+  display: block;
+  width: 4em;
+  height: 4em;
 }
 
 section.features ul li a svg {
-  position: absolute;
-  top: 50%;
-  margin-top: -1em;
-  left: 50%;
-  margin-left: -1em;
-  width: 2em;
-  height: 2em;
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
   fill: @color_bright_text;
-  transition: all 0.3s;
-  opacity: 1;
 }
 
 section.features ul li img {
   display: block;
+  border-top: 1px solid @color_heading;
   margin-left: auto;
   margin-right: auto;
   width: 150px
@@ -223,6 +213,7 @@ section.features ul li p {
   margin: 0;
   padding: 0.5em;
   box-sizing: border-box;
+  min-height: 230px;
 }
 
 /**

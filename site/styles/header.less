@@ -21,8 +21,12 @@ header:before {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 60px;
-  background-color: @color_bright_text;
+  height: calc(100vw * 0.42vw);
+  transform: scaleY(0.5);
+  transform-origin: center bottom;
+  background-image: url(../images/shape.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 
 header iframe {

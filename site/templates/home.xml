@@ -47,7 +47,7 @@
 						<a href="#video">
 							<cms:text constant="menu_video"/>
 						</a>
-						<a href="#location">
+						<a href="#stores">
 							<cms:text constant="menu_location"/>
 						</a>
 						<a href="#form">
@@ -60,7 +60,7 @@
 			</header>
 
 			<!-- Product gallery -->
-			<section class="products">
+			<section id="models" class="products">
 				<cms:mobile>
 					<div class="intro">
 						<a class="show" href="javascript:void(0)">
@@ -86,7 +86,7 @@
 						cms:eval="src"
 						/>
 				</cms:mobile>
-				<ul>
+				<ul id="features">
 					<cms:module
 						name="articles"
 						action="show_list"
@@ -97,7 +97,7 @@
 			</section>
 
 			<!-- Video section -->
-			<section class="video">
+			<section id="video" class="video">
 				<cms:module
 					name="youtube"
 					action="show_list"
@@ -116,7 +116,7 @@
 			</section>
 
 			<!-- Location section -->
-			<section class="location">
+			<section id="stores" class="location">
 				<!-- <cms:svg file="site-sprite.svg" symbol="locations"/> -->
 				<h2><cms:text constant="menu_location"/></h2>
 				<p><cms:text constant="description_location"/></p>

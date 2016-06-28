@@ -11,27 +11,73 @@ header {
   text-align: center;
   background-image: url(../images/mobile-header.jpg);
   background-repeat: no-repeat;
-  background-position: center 65px;
+  background-position: center top;
   background-size: 100% auto;
   color: @color_bright_text;
-  height: 455px;
+  height: 390px;
   position: relative;
 }
 
-header img {
-  display: block;
-  padding-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
+header div.mobile_title {
+  background-color: @color_bright_text;
 }
 
-header h1 {
+header div.mobile_title a.logo {
+  display: inline-block;
+  width: 220px;
+}
+
+header div.mobile_title a.logo img {
+  display: block;
+  padding: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+header div.mobile_title a.menu,
+header div.mobile_title a.phone {
+  position: absolute;
+  padding: 0.5em;
+  top: 50%;
+  left: 0;
+  margin-top: -1.5em;
+}
+
+header div.mobile_title a.menu {
+  left: auto;
+  right: 0;
+}
+
+header div.mobile_title a svg {
+  width: 2em;
+  height: 2em;
+}
+
+header nav.mobile_menu {
+  top: 55px !important;
+}
+
+header nav.mobile_menu.visible {
+  width: 100%;
+}
+
+header nav.mobile_menu a {
+  padding: 1em;
+  margin: 0em 1em;
+  font-size: 1.3em;
+  position: relative;
+  border-bottom: 1px solid @color_border;
+}
+
+header > h1 {
+  margin: 0;
+  padding: 0.5em 0em;
   font-size: 1.5em;
   font-weight: 400;
 }
 
-header strong {
+header > strong {
   display: block;
   font-weight: 400;
   font-size: 1.1em;
@@ -40,7 +86,7 @@ header strong {
 a.next_video,
 a.previous_video,
 div.intro a,
-header a {
+header > a {
   display: inline-block;
   text-decoration: none;
   padding: 1em 3em;

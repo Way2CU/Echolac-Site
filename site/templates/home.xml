@@ -16,10 +16,47 @@
 			<header>
 				<cms:desktop>
 					<iframe src="https://player.vimeo.com/video/172405472?autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0"></iframe>
-				</cms:desktop>
 				<img src="_BASEURL.'/site/images/logo.svg'"  alt="logo" cms:eval="src"/>
-				<h1><cms:text constant="slogan"/></h1>
-				<a href="#form"><cms:text constant="button_contact"/></a>
+					<h1><cms:text constant="slogan"/></h1>
+					<a href="#form"><cms:text constant="button_contact"/></a>
+				</cms:desktop>
+
+				<cms:mobile>
+					<div class="mobile_title">
+						<a
+							href="'tel:'.urlencode(Language::getText('phone'))"
+							cms:eval="href"
+							class="phone"
+							>
+							<cms:svg file="site-sprite.svg" symbol="phone"/>
+						</a>
+						<a class="logo" href="url_Make('','home')" cms:eval="href">
+							<img src="_BASEURL.'/site/images/logo-black.svg'"  alt="logo" cms:eval="src"/>
+						</a>
+						<a href="javascript:void(0)" class="menu">
+							<cms:svg file="site-sprite.svg" symbol="menu"/>
+						</a>
+					</div>
+					<nav class="mobile_menu">
+						<a href="#models">
+							<cms:text constant="menu_models"/>
+						</a>
+						<a href="#features">
+							<cms:text constant="menu_features"/>
+						</a>
+						<a href="#video">
+							<cms:text constant="menu_video"/>
+						</a>
+						<a href="#location">
+							<cms:text constant="menu_location"/>
+						</a>
+						<a href="#form">
+							<cms:text constant="menu_contact"/>
+						</a>
+					</nav>
+					<h1><cms:text constant="slogan"/></h1>
+					<a href="#form"><cms:text constant="button_contact"/></a>
+				</cms:mobile>
 			</header>
 
 			<!-- Product gallery -->
@@ -81,7 +118,7 @@
 			<!-- Location section -->
 			<section class="location">
 				<!-- <cms:svg file="site-sprite.svg" symbol="locations"/> -->
-				<h2><cms:text constant="title_location"/></h2>
+				<h2><cms:text constant="menu_location"/></h2>
 				<p><cms:text constant="description_location"/></p>
 				<!-- location article -->
 				<cms:module
@@ -99,7 +136,7 @@
 			<!-- contact section -->
 			<section id="form" class="contact">
 				<!-- <cms:svg file="site-sprite.svg" symbol="contact"/> -->
-				<h2><cms:text constant="title_contact"/></h2>
+				<h2><cms:text constant="menu_contact"/></h2>
 				<!-- contact information -->
 				<a
 					href="'tel:'.urlencode(Language::getText('phone'))"

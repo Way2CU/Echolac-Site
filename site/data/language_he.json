@@ -1,4 +1,3 @@
-
 {
     "site_title": "Echolac",
     "send": "שליחת טופס",
@@ -11,8 +10,11 @@
     "button_contact": "יצירת קשר",
     "slogan": "<strong>המזוודה היפנית החזקה בעולם.</strong>לנסיעה בטוחה ומושלמת",
     "title_features": "הכל מתחיל בפרטים הקטנים קשוחה מבחוץ, רכה ומתוקתקת מבפנים",
-    "title_contact": "צרו קשר",
-    "title_location": "היכן ניתן להשיג?",
+    "menu_contact": "צרו קשר",
+    "menu_location": "היכן ניתן להשיג?",
+    "menu_models": "הדגמים שלנו",
+    "menu_features": "תכונות המזוודה",
+    "menu_video": "סרטונים",
     "label_show_products": "לצפייה בדגמים נוספים",
     "description_location": "מוצרי Echolac מופצים במגוון חנויות ברחבי הארץ",
     "next_video": "הסרטון הבא",

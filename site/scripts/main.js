@@ -152,13 +152,15 @@ Site.on_load = function() {
 
 			Site.sliders.push(slider);
 		}
-		// handle analytics event
-		$('form').on('analytics-event', function(event, data) {
-			if (!data.error)
-				dataLayer.push({
-	            	'event':'leadSent'
-	            });
-		});
+		// connect to every form and handle submission
+		if (dataLayer && Caracal.ContactForm.list.length > 0)
+			for (var index in Caracal.ContactForm.list) {
+				var form = Caracal.ContactForm.list[index];
+				form.events.connect('submit-success', function() {
+					dataLayer.push({'event': 'leadSent'})
+					return true;
+				});
+			}
 };
 
 

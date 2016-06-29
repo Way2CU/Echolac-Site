@@ -157,7 +157,7 @@ Site.on_load = function() {
 			for (var index in Caracal.ContactForm.list) {
 				var form = Caracal.ContactForm.list[index];
 				form.events.connect('submit-success', function() {
-					dataLayer.push({'event': 'leadSent'})
+					dataLayer.push({'event': 'whatever'});
 					return true;
 				});
 			}

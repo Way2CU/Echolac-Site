@@ -133,11 +133,10 @@ Site.on_load = function() {
 
 			// configure slider
 			slider
-				.images.set_container($(gallery))
+				.images.set_container($(control))
 				.images.add($(images))
 				.images.set_step_size(1)
 				.images.set_center(true)
-				.images.set_spacing(15)
 				.controls.attach_next($(next))
 				.controls.attach_previous($(previous));
 			slider.images.update();
